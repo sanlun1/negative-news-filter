@@ -1,0 +1,444 @@
+[
+    {
+        "url": "^https://www\\.yomiuri\\.co\\.jp/",
+        "side": [
+            "div.layout-contents__sidebar",
+            "div.home-2021-primary__side"
+        ],
+        "ranking": [
+            "div#sidebar_ranking_access",
+            "div.p-category-ranking"
+        ],
+        "related": [
+            "aside.ev-article-manual-related__article-inline > *",
+            "div.p-article-reading-recommend"
+        ],
+        "paid": ["div.c-list-member-only"],
+        "footer": ["footer"],
+        "article": [
+            "div.headline > article",
+            "article.news-top-latest__list-item",
+            "section.latestnews > div > article",
+            "div#sidebar_ranking_access > ul > li > ol > li",
+            "article.news-top-genre__sec-list-item",
+            "aside li",
+            "li.p-list-item",
+            "li.p-sidebar-topics-sec-list-item",
+            "li.p-member-list",
+            "li.p-article-reading-recommend-list-item",
+            "li.p-list-item",
+            "li.p-sidebar-member-present-list__item",
+            "div.p-sidebar-coupon-2020 li",
+            "div.opinion-top__tile li",
+            "div.commentary-top-latest",
+            "div.article-related-link",
+            "div#p-emergency-news-obit",
+            "div#p-emergency-2020 li",
+            "section.home-2021-pickup article",
+            "div.pickup article",
+            "div.p-latest-articles > article"
+        ]
+    },
+    {
+        "url": "^https://(www|r)\\.nikkei\\.com/",
+        "side": ["aside"],
+        "ranking": ["kite-ranking-section"],
+        "related": ["div.relatedArticles_r1trxab"],
+        "footer": ["footer"],
+        "paid": [
+            "img.icon_i6435wp",
+            "span.m-iconMember"
+        ],
+        "article": [
+            "div.block_bummrov",
+            "div.featured_fwao5rm",
+            "div.pickup_p1xgid87",
+            "div.column_c17geelt",
+            "div.column_cd72qii",
+            "div.card_c1n1wn9q",
+            "div.k-card",
+            "div.k-hub-layout__column",
+            "div.m-article",
+            "div.m-grid_column",
+            "div.m-miM07", 
+            "div.m-miM09",
+            "div.m-miM20",
+            "div.m-miM21",
+            "div.m-pickup_article",
+            "div[class^='m-miM'][class$='_article']",
+            "div.normalCard_nl1y8tv",
+            "div.primaryCardWrapper_p1lfmsgf",
+            "div.subCard_s1w4dndr",
+            "div.stories-layout__teaser",
+            "div.stories-layout__teaser-top",
+            "div.cmn-headline_news",
+            "aside li",
+            "div.container_c1dxhn1e li",
+            "div.m-miM32 li",
+            "section li",
+            "div#CONTENTS_SUB li",
+            "div#CONTENTS_SUB_TOP li",
+            "div.l-main_photoListArea li",
+            "div.relatedArticles_r1trxab li",
+            "div.stock-indexNews li",
+            "div.cmn-section li",
+            "ul.m-article_list > li",
+            "ul.m-daily_list > li",
+            "ul.m-columnsList > li",
+            "div.cmn-article_list_style1 li",
+            "div.stories-series-content__row article",
+            "div.stories-series__teaser",
+            "a.container_c1q9kzga",
+            "div.stream__article > article"
+        ]
+    },
+    {
+        "url": "^https://www\\.sankei\\.com/",
+        "side": ["aside.grid__column-right-content"],
+        "ranking": ["section.ranking"],
+        "footer": ["footer"],
+        "paid": ["img.lock-svg"],
+        "article": [
+            "article.storycard",
+            "li.ranking__item",
+            "ul.pickup_program > li",
+            "a.breaking-news"
+        ]
+    },
+    {
+        "url": "^https://www\\.asahi\\.com/",
+        "side": ["aside.l-aside"],
+        "ranking": [
+            "div.p-ranking",
+            "div#AccessRanking",
+            "div[x-component-name='SnsRanking']",
+            "div.videoranking"
+        ],
+        "related": ["div.B5yP3"],
+        "paid": ["figure.c-icon--keyGold"],
+        "footer": ["footer"],
+        "article": [
+            ".c-articleModule",
+            "div#Contents li",
+            "div.l-wrapper li",
+            "div.ThmbSetXw60",
+            "dd",
+            "div#MainInner li",
+            "div.T6SYN"
+        ]
+    },
+    {
+        "url": "^https://mainichi\\.jp/",
+        "side": ["div.l-side"],
+        "ranking": ["section#pi-pc-all-ranking"],
+        "related": ["section#articledetail-nextread"],
+        "footer": ["footer"],
+        "paid": [".is-limited"],
+        "remove": ["div.fwpc"],
+        "article": [
+            "li",
+            "dd",
+            "div.l-half-1",
+            "div.cy-thumbnail"
+        ]
+    },
+    {
+        "url": "^https://www\\.hokkaido-np\\.co\\.jp/",
+        "side": ["div.sidebar"],
+        "ranking": ["div.section_side_ranking"],
+        "related": ["section.section.mb_00"],
+        "footer": ["div.footer"],
+        "paid": ["img[alt='会員限定']"],
+        "article": [
+            "div.post_item"
+        ]
+    },
+    {
+        "url": "^https://www\\.kyoto-np\\.co\\.jp/",
+        "side": ["div.l-sub"],
+        "ranking": ["section.sub-ranking"],
+        "related": ["section.side-padding"],
+        "footer": ["footer"],
+        "article": [
+            "article.m-articles-item",
+            "section.sub-movie",
+            "ul.event-list-tab__list > li",
+            "div.news"
+        ]
+    },
+    {
+        "url": "^https://www\\.tokyo-np\\.co\\.jp/",
+        "side": ["aside.sub-container"],
+        "ranking": ["div.mb-15"],
+        "footer": ["footer"],
+        "article": [
+            "li",
+            "div.wrp"
+        ]
+    },
+    {
+        "url": "^https://www3\\.nhk\\.or\\.jp/news/",
+        "side": ["aside#side"],
+        "ranking": ["article.module_aside--ranking"],
+        "related": ["article.module--detail-morenews"],
+        "footer": [
+            "footer",
+            "aside#nhkfooter",
+            "div.nr-common-footer-wrapper"
+        ],
+        "article": [
+            "div.content--header",
+            "dl.content--related > dd",
+            "li"
+        ]
+    },
+    {
+        "url": "^https://www\\.fnn\\.jp/",
+        "side": ["aside.l-sub"],
+        "ranking": [
+            "section.m-ranking",
+            "section.top-ranking"
+        ],
+        "footer": ["footer"],
+        "article": [
+            ".m-article-item",
+            "section.m-ranking-item"
+        ]
+    },
+    {
+        "url": "^https://news\\.ntv\\.co\\.jp/",
+        "side": ["div.sideContents"],
+        "ranking": [
+            "div.live-contents",
+            "div.btn-block > a[href='/ranking/all']"
+        ],
+        "footer": ["footer"],
+        "article": [
+            "div.mainView a"
+        ]
+    },
+    {
+        "url": "^https://news\\.tv-asahi\\.co\\.jp/",
+        "side": ["aside.aside-container"],
+        "ranking": ["div.aside-ranking"],
+        "footer": ["section#section-annnetwork"],
+        "article": [
+            "div.con li",
+            "div#ticker li"
+        ]
+    },
+    {
+        "url": "^https://newsdig\\.tbs\\.co\\.jp/",
+        "side": ["aside.l-sub"],
+        "ranking": [
+            "ul.m-ranking-tab",
+            "div.m-ranking",
+            "a[href='/list/ranking']"
+        ],
+        "footer": ["footer"],
+        "article": [
+            "article[class*='-']"
+        ]
+    },
+    {
+        "url": "^https://news\\.yahoo\\.co\\.jp/",
+        "side": ["div#yjnSub"],
+        "ranking": ["section.yjnSub_section"],
+        "related": [
+            "section.sc-jrIrqw",
+            "div.sc-imABML",
+            "aside#newsFeed"
+        ],
+        "comment": [
+            "div#articleCommentModule",
+            "li.sc-jxOxS",
+            "[class^='NewsFeedCommentCount__']",
+            "span.sc-gTyRtS",
+            "div.sc-XAwzD",
+            "div.sc-cEvuZC",
+            "div.sc-frDJqD",
+            "div.fb-comments",
+            "div.ArticlePolls__OpinionPollWrapper-bRnxXM",
+            "section.sc-kkbgRg",
+            "button.ArticleReaction__Tutorial-AYDFv",
+            "ul.ArticleReaction__ReactionButtonList-ivqmeM",
+            "div#cmtrate",
+            "span.CommentCount"
+        ],
+        "paid": [
+            "p.yjnSub_list_price",
+            "p.panelListItem_text_price",
+            "p.newsFeedPrice_main"
+        ],
+        "footer": ["footer"],
+        "article": [
+            "div[class^='FeedArticleItem__FeedWrap-']",
+            "main li",
+            "p.sc-tVThF",
+            "p.sc-biNVYa",
+            "div.HeroArticle",
+            "div.sc-dRFBHB"
+        ]
+    },
+    {
+        "url": "^https://news\\.nicovideo\\.jp/",
+        "side": ["div.is-3"],
+        "ranking": [
+            "div.news-articles-line-list",
+            "div.news-articles-media-list"
+        ],
+        "related": ["section.article-relateds"],
+        "comment": [
+            "div#comments",
+            "div.news-comments"
+        ],
+        "footer": ["footer"],
+        "article": [
+            ".news-article"
+        ]
+    },
+    {
+        "url": "^https://www\\.jiji\\.com/",
+        "side": [
+            "div#Sub",
+            "div.sticky"
+        ],
+        "ranking": ["div.sticky"],
+        "related": ["div.Relation"],
+        "comment": [
+            "aside#comment",
+            "span.comment_count_wrap",
+            "li.comment"
+        ],
+        "footer": ["footer"],
+        "remove": ["div#Index", "div#Loader"],
+        "article": [
+            "div#Contents li",
+            "div#Contents dd",
+            "div#FlashBoard"
+        ]
+
+    },
+    {
+        "url": "^https://www\\.bbc\\.com/japanese",
+        "side": ["div.e1j2237y3"],
+        "ranking": [
+            "div.bbc-1e8k83u",
+            "section[aria-labelledby='Most-Read']"
+        ],
+        "related": ["section[aria-labelledby='related-content-heading']"],
+        "footer": ["footer"],
+        "article": [
+            "div.bbc-1ff36h2 li"
+        ]
+    },
+    {
+        "url": "^https://www\\.cnn\\.co\\.jp/",
+        "side": ["div.pg-container-side"],
+        "ranking": ["div.cb-l1-m2"],
+        "related": ["aside#related_stories"],
+        "footer": ["footer"],
+        "article": [
+            "div.pg-wrapper li",
+            "div.cd"
+        ]
+    },
+    {
+        "url": "^https://agora-web\\.jp/",
+        "side": ["div#sidebar"],
+        "comment": ["div.fb-comments"],
+        "footer": ["footer"],
+        "article": [
+            "div#content li",
+            "div.entry-card-wrap",
+            "div.subbox",
+            "a.blogcard-wrap"
+        ]
+    },
+    {
+        "url": "^https://jbpress\\.ismedia\\.jp/",
+        "side": ["aside.l-sub"],
+        "ranking": [
+            "div.ranking",
+            "div.ranking-list"
+        ],
+        "related": [
+            "section.m-article-2colm",
+            "section.m-article-colm",
+            "section.m-article-3colm"
+        ],
+        "footer": ["footer.footer"],
+        "article": [
+            "div.l-inner li",
+            "a.m-latest-list-item",
+            "a.top-genre-unit-pickup",
+            "a.top-feature-slist-item",
+            "a.top-feature-vlist-item",
+            "div.top-feature-main",
+            "a.ranking-unit-list"
+        ]
+    },
+    {
+        "url": "^https://gendai\\.media/",
+        "side": ["div.blockContainer_right1"],
+        "ranking": [
+            "aside.sidebar-ranking",
+            "section.ranking-section"
+        ],
+        "related": ["div.relatedArticleBlock"],
+        "footer": ["footer"],
+        "article": [
+            "div.elementArticleItem",
+            "a.topcomicsItem",
+            "li.sidebar-ranking-list__item",
+            "li.ranking-list__item"
+        ]
+    },
+    {
+        "url": "^https://toyokeizai\\.net/",
+        "side": ["div#sub-column"],
+        "ranking": [
+            "div#access-ranking",
+            "div.ranking"
+        ],
+        "related": ["div.subsection"],
+        "footer": ["div#footer"],
+        "article": [
+            "div#contents li",
+            "div.member-paid-articles__item"
+        ]
+    },
+    {
+        "url": "^https://diamond\\.jp/",
+        "side": ["div#sub-column"],
+        "ranking": ["div.sub-ranking"],
+        "related": [
+            "aside.article-related-article",
+            "section.main-feature",
+            "section.article-recommend-article"
+        ],
+        "footer": ["footer"],
+        "article": [
+            ".article-box"
+        ]
+    },
+    {
+        "url": "^https://president\\.jp/",
+        "side": ["aside.l-sub"],
+        "ranking": [
+            "div.sub-ranking",
+            "section.ranking"
+        ],
+        "related": ["div.recommend"],
+        "footer": ["footer"],
+        "article": [
+            "div.top-hero li",
+            "div.feature li",
+            "div.l-contents li",
+            "div.family li",
+            "div.top-latest-article__item",
+            "div.top-hero__inner",
+            "a.ranking-unit__item"
+        ]
+    }
+]
