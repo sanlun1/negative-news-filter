@@ -130,7 +130,10 @@
     {
         "url": "^https://mainichi\\.jp/",
         "side": ["div.l-side"],
-        "ranking": ["section#pi-pc-all-ranking"],
+        "ranking": [
+            "section#pi-pc-all-ranking",
+            "ul.is-ranking"
+        ],
         "related": ["section#articledetail-nextread"],
         "footer": ["footer"],
         "paid": [".is-limited"],
