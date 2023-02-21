@@ -50,8 +50,9 @@
             "span.m-iconMember"
         ],
         "article": [
+            "div[class^='articleBlock_']",
             "div.block_bummrov",
-            "div.featured_fwao5rm",
+            "div[class^='featured_']",
             "div.pickup_p1xgid87",
             "div.column_c17geelt",
             "div.column_cd72qii",
@@ -89,7 +90,8 @@
             "div.stories-series-content__row article",
             "div.stories-series__teaser",
             "a.container_c1q9kzga",
-            "div.stream__article > article"
+            "div.stream__article > article",
+			"article[class^='card_']"
         ]
     },
     {
