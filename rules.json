@@ -142,8 +142,10 @@
         "paid": [".is-limited"],
         "remove": ["div.fwpc"],
         "article": [
-            "li",
-            "dd",
+            "div.main-contents li",
+            "div.main-contents dd",
+            "div#main li",
+            "div#main dd",
             "div.l-half-1",
             "div.cy-thumbnail"
         ]
