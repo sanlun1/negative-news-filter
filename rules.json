@@ -100,7 +100,10 @@
         "side": ["aside.grid__column-right-content"],
         "ranking": ["section.ranking"],
         "footer": ["footer"],
-        "paid": ["img.lock-svg"],
+        "paid": [
+            "img.lock-svg",
+            "img.paywall-icon"
+        ],
         "article": [
             "article.storycard",
             "li.ranking__item",
