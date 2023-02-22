@@ -253,7 +253,9 @@
         "related": [
             "section.sc-jrIrqw",
             "div.sc-imABML",
-            "aside#newsFeed"
+            "aside#newsFeed",
+            "section.sc-hjRWVT",
+			"section#uamods-also_read"
         ],
         "comment": [
             "div#articleCommentModule",
