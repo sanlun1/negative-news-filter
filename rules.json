@@ -342,7 +342,9 @@
         "article": [
             "div#Contents li",
             "div#Contents dd",
-            "div#FlashBoard"
+            "div#FlashBoard",
+            "div.BoxGenreInnerPhoto",
+			"div.TopicsPhoto"
         ]
 
     },
