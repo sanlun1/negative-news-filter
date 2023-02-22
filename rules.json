@@ -282,10 +282,9 @@
         "article": [
             "div[class^='FeedArticleItem__FeedWrap-']",
             "main li",
-            "p.sc-tVThF",
-            "p.sc-biNVYa",
             "div.HeroArticle",
-            "div.sc-dRFBHB"
+            "div.sc-dRFBHB",
+            "section#uamods-topics > div > p"
         ]
     },
     {
