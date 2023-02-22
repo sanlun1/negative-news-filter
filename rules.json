@@ -263,6 +263,7 @@
             "[class^='NewsFeedCommentCount__']",
             "span.sc-gTyRtS",
             "article#uamods > header > div > div:first-child > div > div:first-of-type",
+            "article#uamods-pickup > div:nth-child(2) > span:nth-child(2)",
             "div.fb-comments",
             "div.ArticlePolls__OpinionPollWrapper-bRnxXM",
             "section.sc-kkbgRg",
