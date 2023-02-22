@@ -48,7 +48,10 @@
         "footer": ["footer"],
         "paid": [
             "img.icon_i6435wp",
-            "span.m-iconMember"
+            "span.m-iconMember",
+            "img[alt='会員限定記事']",
+			"img[alt='会員限定']",
+			"span[class^='lockIcon_']"
         ],
         "article": [
             "div[class^='articleBlock_']",
@@ -314,7 +317,11 @@
             "div#Sub",
             "div.sticky"
         ],
-        "ranking": ["div.sticky"],
+        "ranking": [
+            "div.sticky",
+            "section.Ranking",
+			"div.RankingInner"
+        ],
         "related": ["div.Relation"],
         "comment": [
             "aside#comment",
@@ -322,6 +329,7 @@
             "li.comment"
         ],
         "footer": ["footer"],
+        "paid": [".key_icon"],
         "remove": ["div#Index", "div#Loader"],
         "article": [
             "div#Contents li",
@@ -429,6 +437,10 @@
             "section.article-recommend-article"
         ],
         "footer": ["footer"],
+        "paid":[
+            "i.keygold",
+            "i.keysilver"
+        ],
         "article": [
             ".article-box"
         ]
