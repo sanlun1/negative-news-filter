@@ -34,6 +34,7 @@
             "div.article-related-link",
             "div#p-emergency-news-obit",
             "div#p-emergency-2020 li",
+            "div,p-header-notice__item",
             "section.home-2021-pickup article",
             "div.pickup article",
             "div.p-latest-articles > article"
