@@ -279,7 +279,7 @@
             "p.panelListItem_text_price",
             "p.newsFeedPrice_main"
         ],
-        "footer": ["footer"],
+        "footer": ["footer#yjnFooter"],
         "article": [
             "div[class^='FeedArticleItem__FeedWrap-']",
             "main li",
