@@ -124,7 +124,15 @@
             "div.videoranking"
         ],
         "related": ["div.B5yP3"],
-        "paid": ["figure.c-icon--keyGold"],
+        "comment": [
+			"div#expertsComments",
+			"div#tabBody_latestComments",
+			"h2.p-tab__header__latestComments"
+		],
+        "paid": [
+            "figure.c-icon--keyGold",
+            "img[alt='有料会員記事']"
+        ],
         "footer": ["footer"],
         "article": [
             ".c-articleModule",
