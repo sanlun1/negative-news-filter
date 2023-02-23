@@ -395,6 +395,27 @@
 		]
 	},
     {
+		"url": "^https://news\\.goo\\.ne\\.jp/",
+		"side": "div#NR-sub",
+		"ranking": [
+			"div#r_ranking",
+			"section.heading-ima-ranking",
+			"div.column-1"
+		],
+		"related": [
+			"div.gn-related-post",
+			"section.related-article-widget"
+		],
+		"footer": "footer.js-footer",
+		"article": [
+			"ul#topiarea_title > li",
+			"div.gn-news-item ",
+			"ul#extraction-next-news li",
+			"ul.gn-news-list > li",
+			"div#NR-sub li"
+		]
+	},
+    {
         "url": "^https://www\\.bbc\\.com/japanese",
         "side": ["div.e1j2237y3"],
         "ranking": [
