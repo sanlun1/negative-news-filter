@@ -19,7 +19,8 @@ chrome.storage.onChanged.addListener(main);
 
 function main() {
     chrome.storage.local.get(null, (result) => {
-        const whitelist = JSON.parse(result.whitelist)
+        const whitelist = JSON.parse(result.whitelist);
+        const words = JSON.parse(result.words);
         let data = {
             "article": [],
             "paid": [],
@@ -38,7 +39,6 @@ function main() {
                 return result.rules.concat(result.myRules);
             }
         }
-
         for (const site of allRules()) {
             if (location.href.search(site.url) !== -1) {
                 valid = true;
@@ -64,7 +64,10 @@ function main() {
 
             }
         }
-        if (valid === true) {
+        //rules非対応サイトでまず強引モードを実行する
+        if (valid === false && result.aggressive) {
+            aggressive(words);
+        }else if (valid === true) {
             //問答無用削除
             if (data.remove !== []) {
                 for (const i of data.remove) {
@@ -89,7 +92,6 @@ function main() {
                 }
             }
             //NGワード
-            const words = JSON.parse(result.words)
             if (data.article !== []) {
                 for (const slct of data.article) {
                     const elms = document.querySelectorAll(slct);
@@ -101,13 +103,26 @@ function main() {
                         } else if (result.debug) {
                             elm.style.backgroundColor = "pink";
                             const elmChildren = elm.children;
-                            for(const elmChild of elmChildren){
+                            for (const elmChild of elmChildren) {
                                 elmChild.style.backgroundColor = "pink";
                             }
                         }
                     }
                 }
             }
+            //rules対応サイトでは全ての削除が終わった後強引モードを実行
+            if(result.aggressive){
+                aggressive(words);
+            }
         }
     });
+}
+
+function aggressive(words) {
+    const links = document.getElementsByTagName("A")
+    for (const link of links) {
+        if (words.some(i => link.textContent.search(i) !== -1)) {
+            link.remove();
+        }
+    }
 }

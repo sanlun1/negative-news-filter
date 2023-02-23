@@ -5,7 +5,8 @@ const defaultSettings = {
     "comment": false,
     "footer": false,
     "paid": false,
-    "debug": false
+    "debug": false,
+    "aggressive": false
 }
 
 chrome.runtime.onInstalled.addListener(() => {
