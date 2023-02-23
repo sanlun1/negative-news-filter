@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>Options - Negative News Filter</title>
+    <link rel="icon" href="icons/16.png" />
+    <style>
+        body {
+            background-color: #D4EEFF;
+        }
+
+        .example {
+            background-color: #f2f2f2;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Negative News Filter - Options</h1>
+    <p>主要な設定はツールバーの<img src="icons/16.png">アイコンから</p>
+    <h2>My Rules</h2>
+    <h3>記述例</h3>
+    <pre class="example">[
+    {                                         ←JSON形式で
+        "url": "^https?://example\\.com/",    ←URLは正規表現で。「\」は「\\」と書く
+        "side": [                             ←配列の中に1つづつCSSセレクターで
+            "div#side",
+            ".sidebar"
+        ],
+        "ranking": ["div.ranking"],           ←1つならば配列でも
+        "related": "div.related"              ←文字列でも良い
+    },
+    {
+        "url": "^https?://example2\\.(com|jp)",
+        "footer": "footer",
+        "article":[
+            "div#main li",
+            "ul.articleList > li"
+        ],
+        "paid": ["img.iconMember"],
+        "//": "この中に補足事項を書いておく。commentキーはコメント欄要素に当てているので注意"
+    }
+]</pre>
+    <ul>
+        <li>URL（必須）：urlキーに、正規表現・行頭マッチで書いて下さい。「\」は「\\」と書いて下さい。</li>
+        <li>迷惑要素（いずれも省略可）：sideはサイドバー、rankingはランキング、relatedは関連記事、commentはコメント、footerはフッターです。</li>
+        <li>記事リンク（省略可）：articleは記事リンクです。</li>
+        <li>有料記事リンク（省略可）：paidには有料記事リンクに含まれる鍵アイコンや値段表示などを指定して下さい。もちろん、articleで指定されている要素の内部であることが必須です。</li>
+        <li>補足事項（省略可）：補足事項がある場合は「//」キーを作って書いて下さい。</li>
+        <li>強制削除要素（非推奨）：removeは設定の如何を問わず強制的に削除する要素です。本アドオンの動作に支障をきたす要素（主にiframeの親要素）のみに指定して下さい。</li>
+    </ul>
+    <div>
+        <button id="saveMyRules">保存</button>
+        <span id="saveMyRulesStatus"></span>
+    </div>
+    <textarea id="myRules" rows="20" cols="100"></textarea>
+
+    <h2>While List</h2>
+    <h3>記述例</h3>
+    <pre class="example">
+www.example.com                 ←サイトの全要素をホワイトリストに入れる時はドメイン名（サブドメイン含む）のみを書く
+www.example2.com#paid,comment   ←特定の要素をホワイトリストに入れたい時は「#」の後ろに「,」で区切って要素名を書く
+news.example2.com#paid,comment  ←サブドメインが変わればそれも書く（ワイルドカードには非対応です）</pre>
+    <ul>
+        <li>ドメインごとに指定して下さい（サブドメインまで全て書く）。</li>
+        <li>当該ドメインの全要素をホワイトリストに入れる時はドメイン名（サブドメイン含む）を書いて「#」をつけないで下さい。</li>
+        <li>当該ドメインの一部要素をホワイトリストに入れる時はドメイン名の後ろに「#」を書いて「,」で区切って要素名を書いて下さい。</li>
+        <li>指定可能要素はside（サイドバー）、ranking（ランキング）、related（関連記事）、comment（コメント）、footer（フッター）、article（NGワードを指定する記事リンク）、paid（有料記事リンク）、remove（強制削除要素）です。</li>
+        <li>ただし、articleを指定するとpaidも同時にホワイトリストに入ります（paidがarticleを参照しているため）</li>
+    </ul>
+    <div>
+        <button id="saveWhitelist">保存</button>
+        <span id="saveWhitelistStatus"></span>
+    </div>
+    <textarea id="whitelist" rows="20" cols="50"></textarea>
+    <script src="options.js"></script>
+
+</body>
+
+</html>

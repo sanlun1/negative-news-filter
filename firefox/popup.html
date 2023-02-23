@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>Negative News Filter - ポップアップ</title>
+    <style>
+        body {
+            background-color: #D4EEFF;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: x-large;
+        }
+
+        h2 {
+            font-size: medium;
+        }
+
+        h1,
+        h2 {
+            margin: 0;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Negative News Filter</h1>
+    <div id="currentDomain"></div>
+    <h2>NGワード（正規表現）<img src="icons/q.png" width="20px" title="
+        空白・空行は無視されます。&#13;&#10;
+        改行してワードを区切って下さい。&#13;&#10;
+        英数字は全角と半角の両方を登録するのが安全です。&#13;
+        例：G7とＧ７
+        "></h2>
+    <div>
+        <textarea id="words" rows="15" cols="80"></textarea>
+    </div>
+    <h2>まとめて非表示<img src="icons/q.png" width="20px" title="
+        NGワード関係なく以下の迷惑要素を一括非表示にします。&#13;&#10;
+        サイドバー：右側のサイドバー&#13;
+        ランキング：各種ランキング・急上昇・注目の記事&#13;
+        関連記事：記事本文下の関連記事・おすすめ記事&#13;
+        コメント：コメント・読者の反応・アンケート&#13;
+        フッター：下側のフッター
+        "></h2>
+
+    <!--<div>
+        <button id="select">全選択</button>
+        <button id="deselect">全解除</button>
+    </div>-->
+    <label><input type="checkbox" id="side">サイドバー</label>
+    <label><input type="checkbox" id="ranking">ランキング</label>
+    <label><input type="checkbox" id="related">関連記事</label>
+    <label><input type="checkbox" id="comment">コメント</label>
+    <label><input type="checkbox" id="footer">フッター</label>
+    <label><input type="checkbox" id="paid">有料記事（不完全）</label>
+
+    <h2>フィルタルール</h2>
+    <div>
+        <button id="update">UPDATE</button>
+        <a href="https://raw.githubusercontent.com/sanlun1/negative-news-filter/main/rules.json">RAW</a>
+        Last Updated:
+        <span id="date"></span>
+    </div>
+
+    <div><a href="options.html" target="_blank">詳細設定（マイルール・ホワイトリスト）</a></div>
+    <div>
+        Contact Me: 
+        <a href="https://github.com/sanlun1/negative-news-filter">GitHub</a>
+        <a href="https://www.eonet.ne.jp/~internet/nnf/">HP</a>
+    </div>
+    <label><input type="checkbox" id="debug">フィルタ対象を強調（開発者向け）</label>
+    <script src="popup.js"></script>
+</body>
+
+</html>

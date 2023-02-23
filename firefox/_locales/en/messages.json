@@ -1,0 +1,4 @@
+{
+    "name": {"message": "Negative News Filter"},
+    "desc": {"message": "This extension hides article links containing specific words on news sites. You can also hide annoying elements such as sidebars and comments all at once. Supported sites can be added by sending requests on GitHub."}
+}
