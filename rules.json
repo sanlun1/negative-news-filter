@@ -349,6 +349,52 @@
 
     },
     {
+		"url": "^https://www\\.j-cast\\.com/",
+		"side": [
+			"div.column-right",
+			"nav.content-wrapper_aside"
+		],
+		"ranking": [
+			"div.ranking",
+			"div#ac-ranking"
+		],
+		"related": "div.related-entries",
+		"comment": "div#jc-comment",
+		"footer": [
+			"div.footer",
+			"footer"
+		],
+		"article": [
+			"div.content-list_item",
+			"div.news-pickup",
+			"li.news-pickup",
+			"article.content-list_item",
+			"div.item-type-thm-l",
+			"li.entry-item"
+		]
+	},
+    {
+		"url": "^https://www\\.excite\\.co\\.jp/news/",
+		"side": "div.side-contents",
+		"ranking": "div.side-contents",
+		"related": "section.list-related",
+		"footer": "footer.footer",
+		"article": [
+			"div.contents li",
+			"div.top-category-thumb"
+		]
+	},
+    {
+		"url": "^https://news\\.livedoor\\.com/",
+		"ranking": "div.rankingBlock",
+		"side": "div#sub",
+		"footer": "footer#globalFooter",
+		"article": [
+			"div#main li",
+			"div#sub li"
+		]
+	},
+    {
         "url": "^https://www\\.bbc\\.com/japanese",
         "side": ["div.e1j2237y3"],
         "ranking": [
@@ -473,5 +519,26 @@
             "div.top-hero__inner",
             "a.ranking-unit__item"
         ]
-    }
+    },
+    {
+		"url": "^https://forbesjapan\\.com/",
+		"side": "div.cont-right",
+		"ranking": "section.section-ranking",
+		"related": "section.section-side-related",
+		"footer": "footer.footer",
+		"article": [
+			"div.cont li"
+		]
+	},
+	{
+		"url": "^https://wedge\\.ismedia\\.jp/",
+		"side": "div.sidebar",
+		"ranking": "div.ranking",
+		"related": "div.editor-recommend",
+		"footer": "footer",
+		"article": [
+			"div.main li",
+			"div.book-item"
+		]
+	}
 ]
