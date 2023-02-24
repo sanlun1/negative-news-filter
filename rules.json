@@ -13,8 +13,12 @@
             "aside.ev-article-manual-related__article-inline > *",
             "div.p-article-reading-recommend"
         ],
-        "paid": ["div.c-list-member-only"],
-        "footer": ["footer"],
+        "paid": [
+            "div.c-list-member-only"
+        ],
+        "footer": [
+            "footer"
+        ],
         "article": [
             "div.headline > article",
             "article.news-top-latest__list-item",
@@ -42,16 +46,24 @@
     },
     {
         "url": "^https://(www|r)\\.nikkei\\.com/",
-        "side": ["aside"],
-        "ranking": ["kite-ranking-section"],
-        "related": ["div.relatedArticles_r1trxab"],
-        "footer": ["footer"],
+        "side": [
+            "aside"
+        ],
+        "ranking": [
+            "kite-ranking-section"
+        ],
+        "related": [
+            "div.relatedArticles_r1trxab"
+        ],
+        "footer": [
+            "footer"
+        ],
         "paid": [
             "img.icon_i6435wp",
             "span.m-iconMember",
             "img[alt='会員限定記事']",
-			"img[alt='会員限定']",
-			"span[class^='lockIcon_']"
+            "img[alt='会員限定']",
+            "span[class^='lockIcon_']"
         ],
         "article": [
             "div[class^='articleBlock_']",
@@ -65,7 +77,7 @@
             "div.k-hub-layout__column",
             "div.m-article",
             "div.m-grid_column",
-            "div.m-miM07", 
+            "div.m-miM07",
             "div.m-miM09",
             "div.m-miM20",
             "div.m-miM21",
@@ -95,14 +107,20 @@
             "div.stories-series__teaser",
             "a.container_c1q9kzga",
             "div.stream__article > article",
-			"article[class^='card_']"
+            "article[class^='card_']"
         ]
     },
     {
         "url": "^https://www\\.sankei\\.com/",
-        "side": ["aside.grid__column-right-content"],
-        "ranking": ["section.ranking"],
-        "footer": ["footer"],
+        "side": [
+            "aside.grid__column-right-content"
+        ],
+        "ranking": [
+            "section.ranking"
+        ],
+        "footer": [
+            "footer"
+        ],
         "paid": [
             "img.lock-svg",
             "img.paywall-icon"
@@ -116,24 +134,30 @@
     },
     {
         "url": "^https://www\\.asahi\\.com/",
-        "side": ["aside.l-aside"],
+        "side": [
+            "aside.l-aside"
+        ],
         "ranking": [
             "div.p-ranking",
             "div#AccessRanking",
             "div[x-component-name='SnsRanking']",
             "div.videoranking"
         ],
-        "related": ["div.B5yP3"],
+        "related": [
+            "div.B5yP3"
+        ],
         "comment": [
-			"div#expertsComments",
-			"div#tabBody_latestComments",
-			"h2.p-tab__header__latestComments"
-		],
+            "div#expertsComments",
+            "div#tabBody_latestComments",
+            "h2.p-tab__header__latestComments"
+        ],
         "paid": [
             "figure.c-icon--keyGold",
             "img[alt='有料会員記事']"
         ],
-        "footer": ["footer"],
+        "footer": [
+            "footer"
+        ],
         "article": [
             ".c-articleModule",
             "div#Contents li",
@@ -146,15 +170,25 @@
     },
     {
         "url": "^https://mainichi\\.jp/",
-        "side": ["div.l-side"],
+        "side": [
+            "div.l-side"
+        ],
         "ranking": [
             "section#pi-pc-all-ranking",
             "ul.is-ranking"
         ],
-        "related": ["section#articledetail-nextread"],
-        "footer": ["footer"],
-        "paid": [".is-limited"],
-        "remove": ["div.fwpc"],
+        "related": [
+            "section#articledetail-nextread"
+        ],
+        "footer": [
+            "footer"
+        ],
+        "paid": [
+            ".is-limited"
+        ],
+        "remove": [
+            "div.fwpc"
+        ],
         "article": [
             "div.main-contents li",
             "div.main-contents dd",
@@ -166,21 +200,63 @@
     },
     {
         "url": "^https://www\\.hokkaido-np\\.co\\.jp/",
-        "side": ["div.sidebar"],
-        "ranking": ["div.section_side_ranking"],
-        "related": ["section.section.mb_00"],
-        "footer": ["div.footer"],
-        "paid": ["img[alt='会員限定']"],
+        "side": [
+            "div.sidebar"
+        ],
+        "ranking": [
+            "div.section_side_ranking"
+        ],
+        "related": [
+            "section.section.mb_00"
+        ],
+        "footer": [
+            "div.footer"
+        ],
+        "paid": [
+            "img[alt='会員限定']"
+        ],
         "article": [
             "div.post_item"
         ]
     },
     {
+        "url": "^https://www\\.tokyo-np\\.co\\.jp/",
+        "side": [
+            "aside.sub-container"
+        ],
+        "ranking": [
+            "div.mb-15"
+        ],
+        "footer": [
+            "footer"
+        ],
+        "article": [
+            "li",
+            "div.wrp"
+        ]
+    },
+    {
+        "url": "^https://www\\.chunichi\\.co\\.jp/",
+        "side": "aside.sub-container",
+        "ranking": "div.is-active",
+        "footer": "footer",
+        "article": "div#document-wrapper li.item",
+        "//": "ランキングの指定が困難。:has()対応後に修正予定"
+    },
+    {
         "url": "^https://www\\.kyoto-np\\.co\\.jp/",
-        "side": ["div.l-sub"],
-        "ranking": ["section.sub-ranking"],
-        "related": ["section.side-padding"],
-        "footer": ["footer"],
+        "side": [
+            "div.l-sub"
+        ],
+        "ranking": [
+            "section.sub-ranking"
+        ],
+        "related": [
+            "section.side-padding"
+        ],
+        "footer": [
+            "footer"
+        ],
         "article": [
             "article.m-articles-item",
             "section.sub-movie",
@@ -189,20 +265,39 @@
         ]
     },
     {
-        "url": "^https://www\\.tokyo-np\\.co\\.jp/",
-        "side": ["aside.sub-container"],
-        "ranking": ["div.mb-15"],
-        "footer": ["footer"],
-        "article": [
-            "li",
-            "div.wrp"
-        ]
-    },
+		"url": "^https://www\\.kobe-np\\.co\\.jp/",
+		"side": "div#subContents",
+		"ranking": "div.rankingList_wrap",
+		"related": [
+			"div.osusume_area",
+			"section.Related"
+		],
+		"paid": [
+			"img[alt='会員向け']",
+			"img[alt='プラス']",
+			"img[alt='スタンダード']",
+			"img[src='//i.kobe-np.co.jp/common/web/img/icon_plus.png']"
+		],
+		"article": [
+			"div.newsBase",
+			"div.MP_Box",
+			"div.contents li",
+			"a.flexbox-items",
+			"li.list-item"
+		],
+		"//": "有料記事を消すためにdiv.newsBaseを一番上に"
+	},
     {
         "url": "^https://www3\\.nhk\\.or\\.jp/news/",
-        "side": ["aside#side"],
-        "ranking": ["article.module_aside--ranking"],
-        "related": ["article.module--detail-morenews"],
+        "side": [
+            "aside#side"
+        ],
+        "ranking": [
+            "article.module_aside--ranking"
+        ],
+        "related": [
+            "article.module--detail-morenews"
+        ],
         "footer": [
             "footer",
             "aside#nhkfooter",
@@ -216,12 +311,16 @@
     },
     {
         "url": "^https://www\\.fnn\\.jp/",
-        "side": ["aside.l-sub"],
+        "side": [
+            "aside.l-sub"
+        ],
         "ranking": [
             "section.m-ranking",
             "section.top-ranking"
         ],
-        "footer": ["footer"],
+        "footer": [
+            "footer"
+        ],
         "article": [
             ".m-article-item",
             "section.m-ranking-item"
@@ -229,21 +328,31 @@
     },
     {
         "url": "^https://news\\.ntv\\.co\\.jp/",
-        "side": ["div.sideContents"],
+        "side": [
+            "div.sideContents"
+        ],
         "ranking": [
             "div.live-contents",
             "div.btn-block > a[href='/ranking/all']"
         ],
-        "footer": ["footer"],
+        "footer": [
+            "footer"
+        ],
         "article": [
             "div.mainView a"
         ]
     },
     {
         "url": "^https://news\\.tv-asahi\\.co\\.jp/",
-        "side": ["aside.aside-container"],
-        "ranking": ["div.aside-ranking"],
-        "footer": ["section#section-annnetwork"],
+        "side": [
+            "aside.aside-container"
+        ],
+        "ranking": [
+            "div.aside-ranking"
+        ],
+        "footer": [
+            "section#section-annnetwork"
+        ],
         "article": [
             "div.con li",
             "div#ticker li"
@@ -251,27 +360,35 @@
     },
     {
         "url": "^https://newsdig\\.tbs\\.co\\.jp/",
-        "side": ["aside.l-sub"],
+        "side": [
+            "aside.l-sub"
+        ],
         "ranking": [
             "ul.m-ranking-tab",
             "div.m-ranking",
             "a[href='/list/ranking']"
         ],
-        "footer": ["footer"],
+        "footer": [
+            "footer"
+        ],
         "article": [
             "article[class*='-']"
         ]
     },
     {
         "url": "^https://news\\.yahoo\\.co\\.jp/",
-        "side": ["div#yjnSub"],
-        "ranking": ["section.yjnSub_section"],
+        "side": [
+            "div#yjnSub"
+        ],
+        "ranking": [
+            "section.yjnSub_section"
+        ],
         "related": [
             "section.sc-jrIrqw",
             "div.sc-imABML",
             "aside#newsFeed",
             "section.sc-hjRWVT",
-			"section#uamods-also_read"
+            "section#uamods-also_read"
         ],
         "comment": [
             "div#articleCommentModule",
@@ -293,7 +410,9 @@
             "p.panelListItem_text_price",
             "p.newsFeedPrice_main"
         ],
-        "footer": ["footer#yjnFooter"],
+        "footer": [
+            "footer#yjnFooter"
+        ],
         "article": [
             "div[class^='FeedArticleItem__FeedWrap-']",
             "main li",
@@ -304,17 +423,23 @@
     },
     {
         "url": "^https://news\\.nicovideo\\.jp/",
-        "side": ["div.is-3"],
+        "side": [
+            "div.is-3"
+        ],
         "ranking": [
             "div.news-articles-line-list",
             "div.news-articles-media-list"
         ],
-        "related": ["section.article-relateds"],
+        "related": [
+            "section.article-relateds"
+        ],
         "comment": [
             "div#comments",
             "div.news-comments"
         ],
-        "footer": ["footer"],
+        "footer": [
+            "footer"
+        ],
         "article": [
             ".news-article"
         ]
@@ -328,112 +453,144 @@
         "ranking": [
             "div.sticky",
             "section.Ranking",
-			"div.RankingInner"
+            "div.RankingInner"
         ],
-        "related": ["div.Relation"],
+        "related": [
+            "div.Relation"
+        ],
         "comment": [
             "aside#comment",
             "span.comment_count_wrap",
             "li.comment"
         ],
-        "footer": ["footer"],
-        "paid": [".key_icon"],
-        "remove": ["div#Index", "div#Loader"],
+        "footer": [
+            "footer"
+        ],
+        "paid": [
+            ".key_icon"
+        ],
+        "remove": [
+            "div#Index",
+            "div#Loader"
+        ],
         "article": [
             "div#Contents li",
             "div#Contents dd",
             "div#FlashBoard",
             "div.BoxGenreInnerPhoto",
-			"div.TopicsPhoto"
+            "div.TopicsPhoto"
         ]
-
     },
     {
-		"url": "^https://www\\.j-cast\\.com/",
-		"side": [
-			"div.column-right",
-			"nav.content-wrapper_aside"
-		],
-		"ranking": [
-			"div.ranking",
-			"div#ac-ranking"
-		],
-		"related": "div.related-entries",
-		"comment": "div#jc-comment",
-		"footer": [
-			"div.footer",
-			"footer"
-		],
-		"article": [
-			"div.content-list_item",
-			"div.news-pickup",
-			"li.news-pickup",
-			"article.content-list_item",
-			"div.item-type-thm-l",
-			"li.entry-item"
-		]
-	},
+        "url": "^https://www\\.j-cast\\.com/",
+        "side": [
+            "div.column-right",
+            "nav.content-wrapper_aside"
+        ],
+        "ranking": [
+            "div.ranking",
+            "div#ac-ranking"
+        ],
+        "related": "div.related-entries",
+        "comment": "div#jc-comment",
+        "footer": [
+            "div.footer",
+            "footer"
+        ],
+        "article": [
+            "div.content-list_item",
+            "div.news-pickup",
+            "li.news-pickup",
+            "article.content-list_item",
+            "div.item-type-thm-l",
+            "li.entry-item"
+        ]
+    },
     {
-		"url": "^https://www\\.excite\\.co\\.jp/news/",
-		"side": "div.side-contents",
-		"ranking": "div.side-contents",
-		"related": "section.list-related",
-		"footer": "footer.footer",
-		"article": [
-			"div.contents li",
-			"div.top-category-thumb"
-		]
-	},
+        "url": "^https://www\\.excite\\.co\\.jp/news/",
+        "side": "div.side-contents",
+        "ranking": "div.side-contents",
+        "related": "section.list-related",
+        "footer": "footer.footer",
+        "article": [
+            "div.contents li",
+            "div.top-category-thumb"
+        ]
+    },
     {
-		"url": "^https://news\\.livedoor\\.com/",
-		"ranking": "div.rankingBlock",
-		"side": "div#sub",
-		"footer": "footer#globalFooter",
-		"article": [
-			"div#main li",
-			"div#sub li"
-		]
-	},
+        "url": "^https://news\\.livedoor\\.com/",
+        "ranking": "div.rankingBlock",
+        "side": "div#sub",
+        "footer": "footer#globalFooter",
+        "article": [
+            "div#main li",
+            "div#sub li"
+        ]
+    },
     {
-		"url": "^https://news\\.goo\\.ne\\.jp/",
-		"side": "div#NR-sub",
-		"ranking": [
-			"div#r_ranking",
-			"section.heading-ima-ranking",
-			"div.column-1"
-		],
-		"related": [
-			"div.gn-related-post",
-			"section.related-article-widget"
-		],
-		"footer": "footer.js-footer",
-		"article": [
-			"ul#topiarea_title > li",
-			"div.gn-news-item ",
-			"ul#extraction-next-news li",
-			"ul.gn-news-list > li",
-			"div#NR-sub li"
-		]
-	},
+        "url": "^https://news\\.goo\\.ne\\.jp/",
+        "side": "div#NR-sub",
+        "ranking": [
+            "div#r_ranking",
+            "section.heading-ima-ranking",
+            "div.column-1"
+        ],
+        "related": [
+            "div.gn-related-post",
+            "section.related-article-widget"
+        ],
+        "footer": "footer.js-footer",
+        "article": [
+            "ul#topiarea_title > li",
+            "div.gn-news-item ",
+            "ul#extraction-next-news li",
+            "ul.gn-news-list > li",
+            "div#NR-sub li"
+        ]
+    },
+    {
+        "url": "^https://www\\.47news\\.jp/",
+        "side": "div.col_side",
+        "related": "div.related_posts",
+        "footer": "footer",
+        "article": [
+            "main a.post_item",
+            "li.headline_item"
+        ]
+    },
     {
         "url": "^https://www\\.bbc\\.com/japanese",
-        "side": ["div.e1j2237y3"],
+        "side": [
+            "div.e1j2237y3"
+        ],
         "ranking": [
             "div.bbc-1e8k83u",
             "section[aria-labelledby='Most-Read']"
         ],
-        "related": ["section[aria-labelledby='related-content-heading']"],
-        "footer": ["footer"],
+        "related": [
+            "section[aria-labelledby='related-content-heading']"
+        ],
+        "footer": [
+            "footer"
+        ],
         "article": [
             "div.bbc-1ff36h2 li"
         ]
     },
     {
         "url": "^https://www\\.cnn\\.co\\.jp/",
-        "side": ["div.pg-container-side"],
-        "ranking": ["div.cb-l1-m2"],
-        "related": ["aside#related_stories"],
-        "footer": ["footer"],
+        "side": [
+            "div.pg-container-side"
+        ],
+        "ranking": [
+            "div.cb-l1-m2"
+        ],
+        "related": [
+            "aside#related_stories"
+        ],
+        "footer": [
+            "footer"
+        ],
         "article": [
             "div.pg-wrapper li",
             "div.cd"
@@ -441,9 +598,15 @@
     },
     {
         "url": "^https://agora-web\\.jp/",
-        "side": ["div#sidebar"],
-        "comment": ["div.fb-comments"],
-        "footer": ["footer"],
+        "side": [
+            "div#sidebar"
+        ],
+        "comment": [
+            "div.fb-comments"
+        ],
+        "footer": [
+            "footer"
+        ],
         "article": [
             "div#content li",
             "div.entry-card-wrap",
@@ -453,7 +616,9 @@
     },
     {
         "url": "^https://jbpress\\.ismedia\\.jp/",
-        "side": ["aside.l-sub"],
+        "side": [
+            "aside.l-sub"
+        ],
         "ranking": [
             "div.ranking",
             "div.ranking-list"
@@ -463,7 +628,9 @@
             "section.m-article-colm",
             "section.m-article-3colm"
         ],
-        "footer": ["footer.footer"],
+        "footer": [
+            "footer.footer"
+        ],
         "article": [
             "div.l-inner li",
             "a.m-latest-list-item",
@@ -476,13 +643,19 @@
     },
     {
         "url": "^https://gendai\\.media/",
-        "side": ["div.blockContainer_right1"],
+        "side": [
+            "div.blockContainer_right1"
+        ],
         "ranking": [
             "aside.sidebar-ranking",
             "section.ranking-section"
         ],
-        "related": ["div.relatedArticleBlock"],
-        "footer": ["footer"],
+        "related": [
+            "div.relatedArticleBlock"
+        ],
+        "footer": [
+            "footer"
+        ],
         "article": [
             "div.elementArticleItem",
             "a.topcomicsItem",
@@ -492,13 +665,19 @@
     },
     {
         "url": "^https://toyokeizai\\.net/",
-        "side": ["div#sub-column"],
+        "side": [
+            "div#sub-column"
+        ],
         "ranking": [
             "div#access-ranking",
             "div.ranking"
         ],
-        "related": ["div.subsection"],
-        "footer": ["div#footer"],
+        "related": [
+            "div.subsection"
+        ],
+        "footer": [
+            "div#footer"
+        ],
         "article": [
             "div#contents li",
             "div.member-paid-articles__item"
@@ -506,15 +685,21 @@
     },
     {
         "url": "^https://diamond\\.jp/",
-        "side": ["div#sub-column"],
-        "ranking": ["div.sub-ranking"],
+        "side": [
+            "div#sub-column"
+        ],
+        "ranking": [
+            "div.sub-ranking"
+        ],
         "related": [
             "aside.article-related-article",
             "section.main-feature",
             "section.article-recommend-article"
         ],
-        "footer": ["footer"],
-        "paid":[
+        "footer": [
+            "footer"
+        ],
+        "paid": [
             "i.keygold",
             "i.keysilver"
         ],
@@ -524,13 +709,19 @@
     },
     {
         "url": "^https://president\\.jp/",
-        "side": ["aside.l-sub"],
+        "side": [
+            "aside.l-sub"
+        ],
         "ranking": [
             "div.sub-ranking",
             "section.ranking"
         ],
-        "related": ["div.recommend"],
-        "footer": ["footer"],
+        "related": [
+            "div.recommend"
+        ],
+        "footer": [
+            "footer"
+        ],
         "article": [
             "div.top-hero li",
             "div.feature li",
@@ -542,24 +733,24 @@
         ]
     },
     {
-		"url": "^https://forbesjapan\\.com/",
-		"side": "div.cont-right",
-		"ranking": "section.section-ranking",
-		"related": "section.section-side-related",
-		"footer": "footer.footer",
-		"article": [
-			"div.cont li"
-		]
-	},
-	{
-		"url": "^https://wedge\\.ismedia\\.jp/",
-		"side": "div.sidebar",
-		"ranking": "div.ranking",
-		"related": "div.editor-recommend",
-		"footer": "footer",
-		"article": [
-			"div.main li",
-			"div.book-item"
-		]
-	}
+        "url": "^https://forbesjapan\\.com/",
+        "side": "div.cont-right",
+        "ranking": "section.section-ranking",
+        "related": "section.section-side-related",
+        "footer": "footer.footer",
+        "article": [
+            "div.cont li"
+        ]
+    },
+    {
+        "url": "^https://wedge\\.ismedia\\.jp/",
+        "side": "div.sidebar",
+        "ranking": "div.ranking",
+        "related": "div.editor-recommend",
+        "footer": "footer",
+        "article": [
+            "div.main li",
+            "div.book-item"
+        ]
+    }
 ]
