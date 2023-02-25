@@ -21,14 +21,15 @@ chrome.storage.local.get(["myRules", "whitelist"], (result) => {
 document.getElementById("saveMyRules").addEventListener('click', () => {
     try {
         chrome.storage.local.set({ "myRules": JSON.parse(myRules.value) });
-        saveMyRulesStatus.textContent = "保存しました"
         chrome.storage.local.get(["myRules"], (result) => {
             if (result.myRules !== undefined) {
                 myRules.value = JSON.stringify(result.myRules, null, "\t");
+                saveMyRulesStatus.textContent = "保存しました";
+                resetStatus(saveMyRulesStatus);
             }
         });
     } catch {
-        saveMyRulesStatus.textContent = "JSONに問題があります"
+        saveMyRulesStatus.textContent = "JSONに問題があります";
     }
 });
 
@@ -39,8 +40,15 @@ document.getElementById("saveWhitelist").addEventListener('click', () => {
         saveWords = saveWords.split(/\n/);
         saveWords = saveWords.filter(n => n !== "");
         chrome.storage.local.set({ "whitelist": JSON.stringify(saveWords) });
-        saveWhitelistStatus.textContent = "保存しました"
+        saveWhitelistStatus.textContent = "保存しました";
+        resetStatus(saveWhitelistStatus);
     } catch {
-        saveWhitelistStatus.textContent = "失敗しました"
+        saveWhitelistStatus.textContent = "失敗しました";
     }
 });
+
+function resetStatus(text){
+    setTimeout(() => {
+        text.textContent = "";
+    }, 2*1000);
+}

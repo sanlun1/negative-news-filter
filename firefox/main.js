@@ -50,10 +50,10 @@ function main() {
                 if (whitelist !== undefined) {
                     whitelist.some((i) => {
                         if (i.includes(document.domain)) {
-                            if (!i.includes("#")) {
+                            if (!i.includes("$")) {
                                 valid = false;
                             } else {
-                                const exclude = i.replace(/^.*#/, "").split(',');
+                                const exclude = i.replace(/^.*\$/, "").split(',');
                                 for (const j of exclude) {
                                     data[j] = []
                                 }
@@ -67,7 +67,7 @@ function main() {
         //rules非対応サイトでまず強引モードを実行する
         if (valid === false && result.aggressive) {
             aggressive(words);
-        }else if (valid === true) {
+        } else if (valid === true) {
             //問答無用削除
             if (data.remove !== []) {
                 for (const i of data.remove) {
@@ -86,7 +86,8 @@ function main() {
                         if (result[annoyance]) {
                             elm.remove();
                         } else if (result.debug) {
-                            elm.style = "box-sizing:border-box;border:solid 4px red;"
+                            elm.style = "box-sizing:border-box;border:solid 4px red;";
+                            elm.title = i;
                         }
                     }
                 }
@@ -102,16 +103,27 @@ function main() {
                             elm.remove();
                         } else if (result.debug) {
                             elm.style.backgroundColor = "pink";
-                            const elmChildren = elm.children;
+                            elm.title = slct;
+                            /*const elmChildren = elm.children;
                             for (const elmChild of elmChildren) {
                                 elmChild.style.backgroundColor = "pink";
-                            }
+                            }*/
+                        }
+                    }
+                }
+                //デバッグモード有料要素表示
+                if (result.debug && data.paid !== [] && !result.paid) {
+                    for(const slct of data.paid){
+                        const elms = document.querySelectorAll(slct)
+                        for(const elm of elms){
+                            elm.style = "box-sizing:border-box;border:solid 1px blue;";
+                            elm.title = slct;
                         }
                     }
                 }
             }
             //rules対応サイトでは全ての削除が終わった後強引モードを実行
-            if(result.aggressive){
+            if (result.aggressive) {
                 aggressive(words);
             }
         }
