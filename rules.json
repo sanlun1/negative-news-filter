@@ -63,7 +63,8 @@
             "span.m-iconMember",
             "img[alt='会員限定記事']",
             "img[alt='会員限定']",
-            "span[class^='lockIcon_']"
+            "span[class^='lockIcon_']",
+            "i[style*='k-lock']"
         ],
         "article": [
             "div[class^='articleBlock_']",
