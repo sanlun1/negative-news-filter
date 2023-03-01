@@ -237,6 +237,25 @@
         ]
     },
     {
+		"url": "^https://www\\.shimotsuke\\.co\\.jp/",
+		"side": "div#sub-column",
+		"ranking": "div.ranking",
+		"related": "div#related-article-small",
+		"footer": "footer",
+		"article": [
+			"li.current li",
+			"div.newsletter-list li",
+			"div#contents-bottom li",
+			"div#article-category li",
+			"div#sub-column li",
+			"div.csw-content-box",
+			"li.current li",
+			"div#related-article-small li",
+			"div.news-list-container li",
+			"div#original-feature-list li"
+		]
+	},
+    {
         "url": "^https://www\\.chunichi\\.co\\.jp/",
         "side": "aside.sub-container",
         "ranking": "div.is-active",
@@ -288,6 +307,15 @@
         ],
         "//": "有料記事を消すためにdiv.newsBaseを一番上に"
     },
+    	{
+		"url": "^https://www\\.kochinews\\.co\\.jp/",
+		"side": "div.contRight",
+		"ranking": "section.ranking_sec",
+		"related": "section.article_list-sec",
+		"footer": "footer.footer",
+		"paid": "span.ico-lock",
+		"article": "div.cont li"
+	},
     {
         "url": "^https://www3\\.nhk\\.or\\.jp/news/",
         "side": [
