@@ -220,6 +220,17 @@
             "div.post_item"
         ]
     },
+    	{
+		"url": "^https://kahoku.news/",
+		"side": "div.vr2_aside__area",
+		"related": "ul.vr2_relation_article-list",
+		"footer": "footer.vr2_footer__wrap",
+		"paid": [
+			"span.vr2_articleslist__member",
+			"span.vr2_timelinelist__member"
+		],
+		"article": "main#globalMain li"
+	},
     {
         "url": "^https://www\\.tokyo-np\\.co\\.jp/",
         "side": [
@@ -308,6 +319,28 @@
         "//": "有料記事を消すためにdiv.newsBaseを一番上に"
     },
     	{
+		"url": "^https://www\\.chugoku-np\\.co\\.jp/",
+		"side": "aside.l-sub",
+		"related": "div#csw_block",
+		"footer": "footer.m-footer",
+		"paid": "span.c-mark-key",
+		"article": [
+			"div.top-genre-articles__list",
+			"div.top-genre-articles__text",
+			"div.top-genre-articles__first",
+			"div.m-select-contents__item",
+			"div.m-select-contents__first",
+			"div.pickup-articles__item",
+			"div.m-movielist-item",
+			"div.m-pr-block__item",
+			"div.m-series__list",
+			"a.m-header-nav-subunit-menu__link",
+			"article[class*='item']",
+			"a[class*='item']",
+			"div.csw-content-box"
+		]
+	},
+    	{
 		"url": "^https://www\\.kochinews\\.co\\.jp/",
 		"side": "div.contRight",
 		"ranking": "section.ranking_sec",
@@ -315,6 +348,22 @@
 		"footer": "footer.footer",
 		"paid": "span.ico-lock",
 		"article": "div.cont li"
+	},
+    	{
+		"url": "^https://www.nishinippon.co.jp/",
+		"side": [
+			"div.top-firstContents-sub",
+			"div#l-sub"
+		],
+		"comment": [
+			"div.c-articleList-anatoku-item-people",
+			"div.top-firstContents-anatoku-people",
+			"div.anatokuDetail-body"
+		],
+		"footer": "footer#l-footer",
+		"paid": "span.u-lock",
+		"article": "article[class*='item']",
+		"//": "ランキング・関連記事の対応困難。has対応後に対応させる"
 	},
     {
         "url": "^https://www3\\.nhk\\.or\\.jp/news/",
