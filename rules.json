@@ -286,6 +286,7 @@
         "related": [
             "section.side-padding"
         ],
+        "comment": "div#ulCommentWidget",
         "footer": [
             "footer"
         ],
