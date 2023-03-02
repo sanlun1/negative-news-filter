@@ -271,9 +271,10 @@
         "url": "^https://www\\.chunichi\\.co\\.jp/",
         "side": "aside.sub-container",
         "ranking": "div.is-active",
+        "comment": "div#ulCommentWidget",
         "footer": "footer",
         "article": "div#document-wrapper li.item",
-        "//": "ランキングの指定が困難。:has()対応後に修正予定"
+        "//": "ランキング・一部の関連記事の指定が困難。:has()対応後に修正予定"
     },
     {
         "url": "^https://www\\.kyoto-np\\.co\\.jp/",
@@ -286,7 +287,6 @@
         "related": [
             "section.side-padding"
         ],
-        "comment": "div#ulCommentWidget",
         "footer": [
             "footer"
         ],
