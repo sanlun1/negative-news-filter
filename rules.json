@@ -456,6 +456,55 @@
         ]
     },
     {
+        "url": "^https://www\\.ktv\\.jp/news/",
+        "side": "div#news-sidebar",
+        "related": "section#article-new",
+        "footer": "footer#ktv-footer",
+        "article": [
+            "div.list_inner",
+            "div.headline-article",
+            "dl.ent-list dd",
+            "article[class$='-article'] > div.article_inner"
+        ]
+    },
+    {
+        "url": "^https://www\\.ytv\\.co\\.jp/press/",
+        "side": "div.column-side",
+        "footer": [
+            "div#news-footer",
+            "div#news-bottom-banner"
+        ],
+        "article": [
+            "article[class^='article-'][class*='-box']",
+            "article[class^='relation-'][class*='-box']"
+        ]
+    },
+    {
+        "url": "^https://www\\.asahi\\.co\\.jp/webnews/",
+        "side": "div#side",
+        "ranking": [
+            "div#main_ranking",
+            "div#side_ranking"
+        ],
+        "footer": "div#footer",
+        "article": [
+            "div#topNews_list > a",
+            "div.contents li",
+            "div#js-ranking > a",
+            "ul#js-side_ranking > a"
+        ]
+    },
+    {
+        "url": "^https://www\\.mbs\\.jp/news/",
+        "side": "div.article-wrap--pickup",
+        "footer": "div#mbsGlobalFooter",
+        "article": [
+            "div.common-card",
+            "a.pickup-index-item",
+            "div.pickup-index__main"
+        ]
+    },
+    {
         "url": "^https://news\\.yahoo\\.co\\.jp/",
         "side": [
             "div#yjnSub"
@@ -464,11 +513,10 @@
             "section.yjnSub_section"
         ],
         "related": [
-            "section.sc-jrIrqw",
             "div.sc-imABML",
             "aside#newsFeed",
-            "section.sc-hjRWVT",
-            "section#uamods-also_read"
+            "section#uamods-also_read",
+            "div[class^='ArticleReaction__Wrapper-']+section"
         ],
         "comment": [
             "div#articleCommentModule",
@@ -488,7 +536,8 @@
         "paid": [
             "p.yjnSub_list_price",
             "p.panelListItem_text_price",
-            "p.newsFeedPrice_main"
+            "p.newsFeedPrice_main",
+            "p[class*='PriceText']"
         ],
         "footer": [
             "footer#yjnFooter"
@@ -498,7 +547,8 @@
             "main li",
             "div.HeroArticle",
             "div.sc-dRFBHB",
-            "section#uamods-topics > div > p"
+            "section#uamods-topics > div > p",
+            "div[class^='MicropaymentRecommendItem__RecommendItem-']"
         ]
     },
     {
@@ -646,6 +696,24 @@
         "article": [
             "div#columns-container li",
             "article.storycard"
+        ]
+    },
+    {
+        "url": "^https://www\\.zakzak\\.co\\.jp/",
+        "side": "aside#right-rail-container",
+        "ranking": "section.ranking",
+        "comment": [
+            "div#ulCommentWidget",
+            "a.story-card-comments"
+        ],
+        "footer": "footer",
+        "article": [
+            "article.storycard",
+            "article.collections-switcher-top-story-title",
+            "div.collections-switcher-top-story",
+            "li.ranking__item",
+            "div.section__story > a",
+            "div.section-list-item > a"
         ]
     },
     {
