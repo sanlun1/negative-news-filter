@@ -531,7 +531,8 @@
             "button.ArticleReaction__Tutorial-AYDFv",
             "ul.ArticleReaction__ReactionButtonList-ivqmeM",
             "div#cmtrate",
-            "span.CommentCount"
+            "span.CommentCount",
+            "div#comModule"
         ],
         "paid": [
             "p.yjnSub_list_price",
