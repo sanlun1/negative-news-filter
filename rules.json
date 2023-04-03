@@ -944,6 +944,19 @@
         ]
     },
     {
+        "url": "^https://sakisiru\\.jp/",
+        "side": "div#sub",
+        "ranking": "div.rankingWrapper",
+        "comment": "div.comment",
+        "related": "div.bottom",
+        "footer": "div#footerWrapper",
+        "paid": "img[alt='有料記事']",
+        "article": [
+            "div.box",
+            "ul.ranking > li"
+        ]
+    },
+    {
         "url": "^https://hochi\\.news/",
         "side": "div.conteiner-right",
         "related": "div.related__wrap",
@@ -1008,7 +1021,22 @@
         "footer": "div#footer",
         "article": [
             "main li",
-            "section[class^='tab-'"
+            "section[class^='tab-']"
+        ]
+    },
+    {
+        "url": "^https://www\\.nikkan-gendai\\.com/",
+        "side": "div.right-menu",
+        "ranking": "div.lanking-box",
+        "related": "div.relation-link-area",
+        "footer": "footer",
+        "paid": "img[alt='会員限定記事']",
+        "article": [
+            "li.article-box",
+            "div.main-topics",
+            "ol.lank-list > li",
+            "div[id^='latest_article-body-tab_'] li",
+            "div.relation-link-area li"
         ]
     },
     {
