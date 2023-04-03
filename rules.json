@@ -613,6 +613,17 @@
         ]
     },
     {
+        "url": "^https://sp\\.m\\.jiji\\.com/",
+        "side": "div#sidebar",
+        "ranking": "ol.ranking",
+        "related": "div.newsRelated",
+        "footer": "footer#footer",
+        "article": [
+            "div.slider__item",
+            "div#contents li"
+        ]
+    },
+    {
         "url": "^https://www\\.j-cast\\.com/",
         "side": [
             "div.column-right",
