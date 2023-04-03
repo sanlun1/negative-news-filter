@@ -22,18 +22,35 @@
         h2 {
             margin: 0;
         }
+
+        #version {
+            font-size: small;
+            font-weight: normal;
+        }
+
+        #hideWords:checked~#words {
+            display: none;
+        }
+
+        #hideWords:not(:checked)~#words {
+            display: block;
+        }
     </style>
 
 </head>
 
 <body>
-    <h1>Negative News Filter</h1>
-    <div id="currentDomain"></div>
-    <h2>NGワード（正規表現）<img src="icons/q.png" width="20px" title="空白・空行は無視されます。&#13;&#10;改行してワードを区切って下さい。&#13;&#10;英数字は全角と半角の両方を登録するのが安全です。&#13;例：G7とＧ７"></h2>
-    <div>
-        <textarea id="words" rows="15" cols="80"></textarea>
-    </div>
-    <h2>まとめて非表示<img src="icons/q.png" width="20px" title="NGワード関係なく以下の迷惑要素を一括非表示にします。&#13;&#10;サイドバー：右側のサイドバー&#13;ランキング：各種ランキング&#13;関連記事：記事本文下の関連・おすすめ記事&#13;コメント：コメント・読者の反応&#13;フッター：下側のフッター"></h2>
+    <h1>Negative News Filter<span id="version"></span></h1>
+    <!--<div id="currentDomain"></div>-->
+    <h2 style="display: inline;">NGワード（正規表現）<img src="icons/q.png" width="20px"
+            title="空白・空行は無視されます。&#13;&#10;改行してワードを区切って下さい。&#13;&#10;英数字は全角と半角の両方を登録するのが確実です。&#13;例：G7とＧ７"></h2>
+    <input type="checkbox" id="hideWords"><label for="hideWords">入力欄を隠す</label>
+
+    <textarea id="words" rows="15" cols="80"></textarea>
+
+    <h2>まとめて非表示<img src="icons/q.png" width="20px"
+            title="NGワード関係なく以下の迷惑要素を一括非表示にします。&#13;&#10;サイドバー：右側のサイドバー&#13;ランキング：各種ランキング&#13;関連記事：記事本文下の関連・おすすめ記事&#13;コメント：コメント・読者の反応&#13;フッター：下側のフッター&#13;有料記事：有料記事リンク、実験的実装">
+    </h2>
 
     <!--<div>
         <button id="select">全選択</button>
@@ -44,24 +61,28 @@
     <label><input type="checkbox" id="related">関連記事</label>
     <label><input type="checkbox" id="comment">コメント</label>
     <label><input type="checkbox" id="footer">フッター</label>
-    <label><input type="checkbox" id="paid">有料記事（不完全）</label>
+    <label><input type="checkbox" id="paid">有料記事（実験的）</label>
 
-    <h2>フィルタルール</h2>
+    <h2>フィルタルール<img src="icons/q.png" width="20px" title="GitHubからルールファイルを取得します。"></h2>
     <div>
         <button id="update">UPDATE</button>
         <a href="https://raw.githubusercontent.com/sanlun1/negative-news-filter/main/rules.json">RAW</a>
         Last Updated:
         <span id="date"></span>
     </div>
-
-    <div><a href="options.html" target="_blank">詳細設定（マイルール・ホワイトリスト）</a></div>
+    <h2>その他設定</h2>
+    <div><a href="options.html" target="_blank">マイルール・ホワイトリスト</a></div>
+    <div><label><input type="checkbox" id="aggressive">強引モード<img src="icons/q.png" width="20px"
+                title="ルールに関わらず、NGワードが含まれるaタグ要素を全て削除します。&#13全てのサイトで動作します。"></label></div>
+    <div><label><input type="checkbox" id="image">画像非表示（実験的）<img src="icons/q.png" width="20px"
+                title="記事リンク内の画像を非表示にします。実験的実装"></label></div>
+    <div><label><input type="checkbox" id="debug">フィルタ対象を強調（開発者向け）<img src="icons/q.png" width="20px"
+                title="NGワードフィルタリング対象要素をピンク背景で、迷惑要素を赤色太枠で、有料記事要素を青色細枠で表示します。"></label></div>
     <div>
         Contact Me:
         <a href="https://github.com/sanlun1/negative-news-filter">GitHub</a>
         <a href="https://www.eonet.ne.jp/~internet/nnf/">HP</a>
     </div>
-    <div><label><input type="checkbox" id="aggressive">強引モード<img src="icons/q.png" width="20px" title="ルールに関わらず、NGワードが含まれるaタグ要素を全て削除します。&#13全てのサイトで動作します。"></label></div>
-    <div><label><input type="checkbox" id="debug">フィルタ対象を強調（開発者向け）</label></div>
     <script src="popup.js"></script>
 </body>
 

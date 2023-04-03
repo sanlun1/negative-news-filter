@@ -1,21 +1,11 @@
+let count = 0;
+const target = document.body;
+const ovserveConfig = { childList: true, subtree: true };
 const observer = new MutationObserver(main);
-observer.observe(document.body, {
-    childList: true,
-    subtree: true
-})
+observer.observe(target, ovserveConfig)
 
-//main();
 window.addEventListener('load', main());
 chrome.storage.onChanged.addListener(main);
-
-/*function iframeElms(selector) {
-    const iframes = document.querySelectorAll('iframe');
-    let elms = [];
-    for (const iframe of iframes) {
-        elms = elms.concat(iframe.contentWindow.document.querySelectorAll(selector));
-    }
-    return elms;
-}*/
 
 function main() {
     chrome.storage.local.get(null, (result) => {
@@ -65,9 +55,9 @@ function main() {
             }
         }
         //rules非対応サイトでまず強引モードを実行する
-        if (valid === false && result.aggressive) {
+        if (!valid && result.aggressive) {
             aggressive(words);
-        } else if (valid === true) {
+        } else if (valid) {
             //問答無用削除
             if (data.remove !== []) {
                 for (const i of data.remove) {
@@ -76,6 +66,10 @@ function main() {
                         j.remove();
                     }
                 }
+            }
+            //右クリック禁止解除
+            if (document.domain === "www.ktv.jp") {
+                document.oncontextmenu = () => { return true; }
             }
             //迷惑要素
             const annoyances = ["side", "ranking", "related", "comment", "footer"]
@@ -99,23 +93,37 @@ function main() {
                     for (const elm of elms) {
                         if (words.some(i => elm.textContent.search(i) !== -1)) {
                             elm.remove();
+                            count++;
                         } else if (result.paid && data.paid.some(i => elm.querySelector(i))) {
                             elm.remove();
+                            count++;
                         } else if (result.debug) {
                             elm.style.backgroundColor = "pink";
                             elm.title = slct;
-                            /*const elmChildren = elm.children;
-                            for (const elmChild of elmChildren) {
-                                elmChild.style.backgroundColor = "pink";
-                            }*/
+                        }
+                        //画像削除モード、必ず有料記事の後に読み込む
+                        if (result.image) {
+                            const imgs = elm.querySelectorAll("figure, picture, img, [style*='background-image']");
+                            for (const img of imgs) {
+                                /*
+                                let imgDom = img;
+                                do {
+                                    const imgParent = imgDom.parentNode;
+                                    img.remove();
+                                    imgDom = imgParent;
+                                } while (imgDom.parentNode.childElementCount === 1);
+                                */
+                                // remove()だと日テレNEWSに不具合
+                                img.style.display = "none";
+                            }
                         }
                     }
                 }
                 //デバッグモード有料要素表示
                 if (result.debug && data.paid !== [] && !result.paid) {
-                    for(const slct of data.paid){
+                    for (const slct of data.paid) {
                         const elms = document.querySelectorAll(slct)
-                        for(const elm of elms){
+                        for (const elm of elms) {
                             elm.style = "box-sizing:border-box;border:solid 1px blue;";
                             elm.title = slct;
                         }
@@ -127,6 +135,11 @@ function main() {
                 aggressive(words);
             }
         }
+        chrome.runtime.sendMessage({
+            valid: valid,
+            count: count,
+            domain: document.domain
+        });
     });
 }
 
@@ -135,6 +148,7 @@ function aggressive(words) {
     for (const link of links) {
         if (words.some(i => link.textContent.search(i) !== -1)) {
             link.remove();
+            count++;
         }
     }
 }

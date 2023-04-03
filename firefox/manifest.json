@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "__MSG_name__",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "description": "__MSG_desc__",
   "default_locale": "ja",
   "icons": {
@@ -19,10 +19,11 @@
     "scripts": [
       "background.js"
     ],
-    "persistent": false
+    "persistent": true
   },
   "content_scripts": [
     {
+      "all_frames": true,
       "matches": [
         "http://*/*",
         "https://*/*"
@@ -39,6 +40,7 @@
   },
   "permissions": [
     "storage",
+    "tabs",
     "https://raw.githubusercontent.com/sanlun1/negative-news-filter/main/rules.json"
-    ]
+  ]
 }

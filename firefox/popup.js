@@ -1,6 +1,9 @@
+const manifest = chrome.runtime.getManifest();
 const words = document.getElementById('words');
 const date = document.getElementById('date');
-const currentDomain = document.getElementById('currentDomain');
+//const currentDomain = document.getElementById('currentDomain');
+
+document.getElementById('version').textContent = manifest.version;
 
 chrome.storage.local.get(["words", "date"], (result) => {
     if (result.words !== undefined) {
@@ -21,7 +24,7 @@ words.addEventListener('change', () => {
     chrome.storage.local.set({ words: JSON.stringify(saveWords) });
 });
 
-const configs = ["side", "ranking", "related", "comment", "paid", "footer", "debug", "aggressive"];
+const configs = ["side", "ranking", "related", "comment", "paid", "footer", "debug", "aggressive", "image", "hideWords"];
 for (const config of configs) {
     const checkbox = document.getElementById(config)
     chrome.storage.local.get(config, (result) => {
@@ -54,9 +57,13 @@ document.getElementById('update').addEventListener('click', () => {
 
 });
 
-currentDomain.textContent = current;
-
 /*
+chrome.runtime.onMessage.addListener((message, sender, callback) => {
+    chrome.tabs.query({ 'active': true, 'lastFocusedWindow': true }, tabs => {
+        currentDomain.textContent = message.domain;
+    })
+});
+
 const checkboxs = document.querySelectorAll("input[type='checkbox']");
 document.getElementById("select").addEventListener('click',()=>{
     for(const checkbox of checkboxs){
