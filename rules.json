@@ -599,10 +599,6 @@
         "paid": [
             ".key_icon"
         ],
-        "remove": [
-            "div#Index",
-            "div#Loader"
-        ],
         "article": [
             "div#Contents li",
             "div#Contents dd",
