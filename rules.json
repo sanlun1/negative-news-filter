@@ -505,7 +505,7 @@
         ]
     },
     {
-        "url": "^https://news\\.yahoo\\.co\\.jp/",
+        "url": "^https://(article|news)\\.yahoo\\.co\\.jp/",
         "side": [
             "div#yjnSub"
         ],
