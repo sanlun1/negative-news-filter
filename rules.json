@@ -608,7 +608,8 @@
             "div#Contents dd",
             "div#FlashBoard",
             "div.BoxGenreInnerPhoto",
-            "div.TopicsPhoto"
+            "div.TopicsPhoto",
+            "div.BoxArticle"
         ]
     },
     {
