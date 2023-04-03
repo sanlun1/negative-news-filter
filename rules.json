@@ -507,7 +507,8 @@
     {
         "url": "^https://(article|news)\\.yahoo\\.co\\.jp/",
         "side": [
-            "div#yjnSub"
+            "div#yjnSub",
+            "div.subColumn"
         ],
         "ranking": [
             "section.yjnSub_section"
@@ -516,7 +517,8 @@
             "div.sc-imABML",
             "aside#newsFeed",
             "section#uamods-also_read",
-            "div[class^='ArticleReaction__Wrapper-']+section"
+            "div[class^='ArticleReaction__Wrapper-']+section",
+            "section.relatedArticle"
         ],
         "comment": [
             "div#articleCommentModule",
@@ -541,7 +543,8 @@
             "p[class*='PriceText']"
         ],
         "footer": [
-            "footer#yjnFooter"
+            "footer#yjnFooter",
+            "footer#footer"
         ],
         "article": [
             "div[class^='FeedArticleItem__FeedWrap-']",
