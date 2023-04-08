@@ -370,7 +370,10 @@
     {
         "url": "^https://www3\\.nhk\\.or\\.jp/news/",
         "side": [
-            "aside#side"
+            [
+                "aside#side",
+                "aside.sidebar"
+            ]
         ],
         "ranking": [
             "article.module_aside--ranking"
@@ -386,7 +389,8 @@
         "article": [
             "div.content--header",
             "dl.content--related > dd",
-            "li"
+            "li",
+            "a.side-news-list__item"
         ]
     },
     {
