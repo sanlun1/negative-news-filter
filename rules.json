@@ -267,6 +267,17 @@
             "div#original-feature-list li"
         ]
     },
+	{
+		"url": "^https://www\\.at-s\\.com/",
+		"side": "div#side",
+		"ranking": "div.ranking",
+		"related": "div#relatedSearch1",
+		"footer": "footer#footer",
+		"article": [
+			"article#contents li",
+			"div.container li"
+		]
+	},
     {
         "url": "^https://www\\.chunichi\\.co\\.jp/",
         "side": "aside.sub-container",
@@ -301,6 +312,7 @@
         "url": "^https://www\\.kobe-np\\.co\\.jp/",
         "side": "div#subContents",
         "ranking": "div.rankingList_wrap",
+        "footer": "div#footer",
         "related": [
             "div.osusume_area",
             "section.Related"
@@ -560,6 +572,10 @@
         ]
     },
     {
+        "url": "^https://news\\.google\\.com/",
+        "article": "article"
+    },
+    {
         "url": "^https://news\\.nicovideo\\.jp/",
         "side": [
             "div.is-3"
@@ -696,6 +712,24 @@
             "ul#extraction-next-news li",
             "ul.gn-news-list > li",
             "div#NR-sub li"
+        ]
+    },
+    {
+        "url": "^https://news\\.biglobe\\.ne\\.jp/",
+        "side": "aside#right-side",
+        "ranking": "section.ranking",
+        "related": [
+            "section.rel-photo-news",
+            "section.rel-topics",
+            "section.news-list",
+            "div.news-recommend"
+        ],
+        "footer": "footer#footer",
+        "article": [
+            "div#mainWrap li",
+            "div.rank",
+            "div#n-rbx",
+            "div.items"
         ]
     },
     {
