@@ -380,7 +380,7 @@
         "//": "ランキング・関連記事の対応困難。has対応後に対応させる"
     },
     {
-        "url": "^https://www3\\.nhk\\.or\\.jp/news/",
+        "url": "^https://www3\\.nhk\\.or\\.jp/([a-z]+-)?news/",
         "side": [
             [
                 "aside#side",
