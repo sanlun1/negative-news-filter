@@ -8,7 +8,8 @@ const defaultSettings = {
     "debug": false,
     "aggressive": false,
     "image": false,
-    "hideWords": false
+    "hideWords": false,
+		"enabled": true
 }
 
 chrome.runtime.onInstalled.addListener(() => {

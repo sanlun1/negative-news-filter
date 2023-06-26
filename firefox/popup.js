@@ -24,7 +24,7 @@ words.addEventListener('change', () => {
     chrome.storage.local.set({ words: JSON.stringify(saveWords) });
 });
 
-const configs = ["side", "ranking", "related", "comment", "paid", "footer", "debug", "aggressive", "image", "hideWords"];
+const configs = ["enabled", "side", "ranking", "related", "comment", "paid", "footer", "debug", "aggressive", "image", "hideWords"];
 for (const config of configs) {
     const checkbox = document.getElementById(config)
     chrome.storage.local.get(config, (result) => {
@@ -68,12 +68,12 @@ const checkboxs = document.querySelectorAll("input[type='checkbox']");
 document.getElementById("select").addEventListener('click',()=>{
     for(const checkbox of checkboxs){
         checkbox.checked = true;
-    }    
+    }
 });
 document.getElementById("deselect").addEventListener('click',()=>{
     for(const checkbox of checkboxs){
         checkbox.checked = false;
-    } 
+    }
 });
 */
 

@@ -2,10 +2,14 @@ let count = 0;
 const target = document.body;
 const ovserveConfig = { childList: true, subtree: true };
 const observer = new MutationObserver(main);
-observer.observe(target, ovserveConfig)
 
-window.addEventListener('load', main());
-chrome.storage.onChanged.addListener(main);
+chrome.storage.local.get(null, (result)=>{
+		if (result.enabled === true){
+				observer.observe(target, ovserveConfig)
+				window.addEventListener('load', main());
+				chrome.storage.onChanged.addListener(main);
+		}
+})
 
 function main() {
     chrome.storage.local.get(null, (result) => {

@@ -22,7 +22,6 @@
   - ビジネス・言論：アゴラ・JBpress・現代ビジネス・東洋経済・ダイヤモンド・プレジデント・フォーブス・ウェッジ・SAKISIRU
   - スポーツ・芸能：報知・サンスポ・デイリー・東スポ・スポニチ・ゲンダイ・ABEMA
 - Pull requestsやIssuesからリクエストを送って下されば適宜対応サイトを増やします！
-  - GitHubを使いたくない人は[作者HP](https://www.eonet.ne.jp/~internet/nnf/)の[BBS](https://www.eonet.ne.jp/~internet/nnf/bbs/)からどうぞ。
 - もちろん、アドオン内でユーザがマイルールを追加することも可能です。
 ## ルール（[rules.json](/rules.json)およびマイルール）の書き方
 - JSON形式で記述します。キーは"url", "article", "paid", "side", "ranking", "related", "comment", "footer", "remove", "//"です。
@@ -35,3 +34,4 @@
 - "//"：補足事項を書く欄です。"comment"キーはコメント欄要素ですので注意して下さい。
 ## 注意点
 - **広告やCookie通知等の一般的な迷惑要素には対応しません**。このような要素については[**uBlock Origin**](https://github.com/gorhill/uBlock)の方が高度なブロックが出来るからです。そもそも、このアドオンはuBlock Originの補完目的として作成しました（NGワードの設定はuBOではやりにくく、また上記のような迷惑要素に対応しているフィルタが無かったため）。このような経緯であるため、本アドオンの利用者には別途uBlock Originをインストールした上で、AdGuard Japanese, AdGuard Annoyances, AdGuard Social Media, [AdGuard Japanese filter Plus](https://github.com/Yuki2718/adblock2)の計4種類のフィルタ（前3者はUBO標準組込、後1者はリンクから）を購読することを**強く推奨します**。
+- Chromiumに対応させる予定は当面ありません。フォーク等はご自由にどうぞ。
