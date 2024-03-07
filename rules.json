@@ -118,7 +118,8 @@
   {
     "url": "^https://www\\.sankei\\.com/",
     "side": [
-      "aside.grid__column-right-content"
+      "aside.grid__column-right-content",
+      "aside.sidebar-column"
     ],
     "ranking": [
       "section.ranking"
