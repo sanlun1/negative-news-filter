@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="ja">
 
-	<head>
+  <head>
     <meta charset="utf-8">
     <title>Options - Negative News Filter</title>
-    <link rel="icon" href="icons/16.png" />
+    <link rel="icon" href="icons/32.png" />
     <style>
      body {
          background-color: #D4EEFF;
@@ -13,35 +13,47 @@
      .example {
          background-color: #f2f2f2;
      }
-		 #editWords:checked~#wordsField {
-				 display: block;
-		 }
-		 #editWords:not(:checked)~#wordsField {
-				 display: none;
-		 }
+     #editWords:checked~#wordsField {
+         display: block;
+     }
+     #editWords:not(:checked)~#wordsField {
+         display: none;
+     }
     </style>
 
-	</head>
+  </head>
 
-	<body>
+  <body>
     <h1>Negative News Filter - Options</h1>
-    <p>主要設定はツールバーの<img src="icons/16.png">アイコンから</p>
-		<h2>NG Words（Regex）</h2>
-		<details>
-			<pre class="example">炎上
+    <p>主要設定はツールバーの<img src="icons/32.png" height="16px">アイコンから</p>
+    <hr>
+    <h2>NGワード(正規表現)</h2>
+    <details>
+      <pre class="example">炎上
 衝撃                                  ←基本的には単語を一語ずつ改行して記述
 感動|(一同)?驚愕|涙が(止|と)まらない  ←パイプを使うと1行に複数語書ける
 G7|Ｇ７                               ←英数字は全角・半角両方書くと安全
 (本名|学歴|住所)は(\?|？)             ←正規表現なので、半角の?の前には\を忘れずに</pre>
-		</details>
-		<input type="checkbox" id="editWords"><label for="hideWords">編集する</label><br>
-		    </details>
+    </details>
+    <input type="checkbox" id="editWords"><label for="hideWords">編集する</label><br>
     <div id="wordsField">
-      <button id="saveWords">保存</button>
-      <span id="saveWordsStatus"></span><br>
-			<textarea id="words" rows="20" cols="100"></textarea>
-		</div>
-    <h2>My Rules</h2>
+      <button id="wordsButton">保存</button>
+      <div id="wordsStatus"></div>
+      <textarea id="words" rows="20" cols="100"></textarea>
+    </div>
+    <hr>
+    <h2>OKワード(正規表現)</h2>
+    <details>
+      <ul>
+        <li>この言葉が含まれている記事はNGワードが含まれていても表示します。</li>
+        <li>記述方法はNGワードと同様です。</li>
+      </ul>
+    </details>
+    <button id="whiteWordsButton">保存</button>
+    <div id="whiteWordsStatus"></div>
+    <textarea id="whiteWords" rows="20" cols="50"></textarea>
+    <hr>
+    <h2>マイルール</h2>
     <details>
       <pre class="example">[
     {                                         ←JSON形式で
@@ -73,13 +85,11 @@ G7|Ｇ７                               ←英数字は全角・半角両方書�
         <li>強制削除要素（非推奨）：removeは設定の如何を問わず強制的に削除する要素です。本アドオンの動作に支障をきたす要素（主にShadow DOMの親要素）のみに指定して下さい。</li>
       </ul>
     </details>
-    <div>
-      <button id="saveMyRules">保存</button>
-      <span id="saveMyRulesStatus"></span>
-    </div>
+    <button id="myRulesButton">保存</button>
+    <div id="myRulesStatus"></div>
     <textarea id="myRules" rows="20" cols="100"></textarea>
-
-    <h2>While List</h2>
+    <hr>
+    <h2>ホワイトリスト(動作させないWebサイト)</h2>
     <details>
       <pre class="example">
 www.example.com                 ←サイトの全要素をホワイトリストに入れる時はドメイン名（サブドメイン含む）を書き「$」はつけない
@@ -94,13 +104,11 @@ news.example2.com$paid,comment  ←サブドメインが変わればそれも書
         <li>ただし、articleを指定するとpaidも同時にホワイトリストに入ります（paidがarticleを参照しているため）</li>
       </ul>
     </details>
-    <div>
-      <button id="saveWhitelist">保存</button>
-      <span id="saveWhitelistStatus"></span>
-    </div>
+    <button id="whitelistButton">保存</button>
+    <div id="whitelistStatus"></div>
     <textarea id="whitelist" rows="20" cols="50"></textarea>
-    <script src="options.js"></script>
 
-	</body>
+    <script src="options.js"></script>
+  </body>
 
 </html>
