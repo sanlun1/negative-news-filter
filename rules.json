@@ -141,7 +141,8 @@
   {
     "url": "^https://www\\.asahi\\.com/",
     "side": [
-      "aside.l-aside"
+      "aside.l-aside",
+      "div.l-row__side"
     ],
     "ranking": [
       "div.p-ranking",
@@ -177,7 +178,8 @@
   {
     "url": "^https://mainichi\\.jp/",
     "side": [
-      "div.l-side"
+      "div.l-side",
+      "section.l-indextop-side"
     ],
     "ranking": [
       "section#pi-pc-all-ranking",
