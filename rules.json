@@ -45,7 +45,8 @@
       "div.pickup article",
       "div.p-latest-articles > article",
       "div.item",
-      "div.hero"
+      "div.hero",
+      "section.home-shimen h4.title"
     ]
   },
   {
@@ -124,6 +125,9 @@
     "ranking": [
       "section.ranking"
     ],
+    "related": [
+      "div.article-link_list"
+    ],
     "footer": [
       "footer"
     ],
@@ -135,7 +139,8 @@
       "article.storycard",
       "li.ranking__item",
       "ul.pickup_program > li",
-      "a.breaking-news"
+      "a.breaking-news",
+      "li.article-link_list__item"
     ]
   },
   {
@@ -382,7 +387,10 @@
     ],
     "footer": "footer#l-footer",
     "paid": "span.u-lock",
-    "article": "article[class*='item']",
+    "article": [
+      "article[class*='item']",
+      "div.top-article  article"
+    ],
     "//": "ランキング・関連記事の対応困難。has対応後に対応させる"
   },
   {
@@ -524,6 +532,16 @@
       "div.common-card",
       "a.pickup-index-item",
       "div.pickup-index__main"
+    ]
+  },
+  {
+    "url": "^https://news\\.ksb\\.co\\.jp/",
+    "side": "aside#sidebar",
+    "ranking": "ul.is-ranking",
+    "related": "ul.is-recommend",
+    "footer": "div#footer",
+    "article": [
+      "ul.md-article-list > li"
     ]
   },
   {
