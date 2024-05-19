@@ -559,7 +559,8 @@
       "section#uamods-also_read",
       "div[class^='ArticleReaction__Wrapper-']+section",
       "section.relatedArticle",
-      "section.sc-bWNTWI"
+      "section.sc-bWNTWI",
+      "section.sc-1nsqm6k-3"
     ],
     "comment": [
       "div#articleCommentModule",
